@@ -1,0 +1,8 @@
+VITE_API_KEY=AIzaSyD5zGb7ZB9HEJzVDwEMS7716AmivXhP_dU
+VITE_AUTH_DOMAIN=tutor-booking--ass-11.firebaseapp.com
+VITE_PROJECT_ID=tutor-booking--ass-11
+VITE_STORAGE_BUCKET=tutor-booking--ass-11.firebasestorage.app
+VITE_MESSAGING_SENDER_ID=112593580353
+VITE_APP_ID=1:112593580353:web:2f40e74d2dd605a25671c0
+VITE_BACKEND_ORIGIN=https://tutorbook-ass-11.vercel.app # Production
+#VITE_BACKEND_ORIGIN=http://localhost:3000 # Localhost
