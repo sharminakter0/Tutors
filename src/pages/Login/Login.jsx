@@ -45,8 +45,8 @@ const Login = () => {
   };
 
   return (
-    <div className=" flex flex-col lg:flex-row-reverse justify-center items-center">
-      <div>
+    <div className=" flex gap-25 lg:px-10 flex-col lg:flex-row-reverse  items-center">
+      <div className="flex-1/3">
         <Lottie
           style={{ width: "250px", height: "450px" }}
           animationData={loginLottie}
@@ -54,7 +54,7 @@ const Login = () => {
         />
         ;
       </div>
-      <form onSubmit={handleLogin} className="">
+      <form onSubmit={handleLogin} className="flex-2/3">
         <div className="card bg-base-100 w-full max-w-md shrink-0 shadow-2xl hover:shadow-3xl transition-shadow duration-300 border border-opacity-10 border-white  mx-auto my-10 ">
           <div className="card-body p-8">
             <h2 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">

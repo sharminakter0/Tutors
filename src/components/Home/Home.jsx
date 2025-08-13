@@ -6,6 +6,7 @@ import CategorySection from '../category/CategorySection';
 import HomeHowItWorks from '../HomeHowItWorks/HomeHowItWorks';
 import HomeTestimonials from '../HomeTestimonials/HomeTestimonials';
 import OurTutors from '../OurTuy=tors/OurTutors';
+import ExtraSection from '../ExtraSection/ExtraSection';
 // import SplashCursor from './SplashCursor'
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
              <CategorySection></CategorySection>
              <OurTutors></OurTutors>
              <HomeHowItWorks></HomeHowItWorks>
+             <ExtraSection></ExtraSection>
              <HomeTestimonials></HomeTestimonials>
         </div>
         </div>

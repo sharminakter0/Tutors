@@ -67,12 +67,12 @@ const MyTutors = () => {
   return (
     <>
     {
-      tutors.length === 0 ?<div className="flex justify-center my-10"> <span className="loading loading-bars loading-xl text-center"></span>  </div>  :  <div className="max-w-7xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-100">
+      tutors.length === 0 ?<div className="flex justify-center my-10"> <span className="loading loading-bars loading-xl text-center"></span>  </div>  :  <div className="max-w-7xl mx-auto px-4 py-8  dark:text-gray-100">
       <h2 className="text-3xl text-primary font-bold mb-6 text-center">My Tutors ({tutors.length})</h2>
 
       <div className="overflow-x-auto border border-gray-300 dark:border-gray-700 rounded-lg">
-        <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-gray-900">
-          <thead className="bg-gray-100 dark:bg-gray-800">
+        <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700 bg-base-100 dark:bg-gray-900">
+          <thead className="bg-base-100 dark:bg-gray-800">
             <tr>
               <th className="px-4 py-3 text-left text-sm font-medium">Photo</th>
               <th className="px-4 py-3 text-left text-sm font-medium">Name</th>
@@ -121,7 +121,7 @@ const MyTutors = () => {
 
       {/* Update Modal */}
       {editingTutor && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center py-7 justify-center z-50">
           <form
             onSubmit={handleUpdateSubmit}
             className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl w-96 space-y-3 text-gray-800 dark:text-gray-100"

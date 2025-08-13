@@ -36,15 +36,15 @@ const BookedTutor = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6 text-gray-800 dark:text-gray-100">
-      <h1 className="text-center text-3xl font-bold my-4 text-red-500 dark:text-red-400">
+    <div className="max-w-7xl mx-auto px-4 py-6 ">
+      <h1 className="text-center text-3xl font-bold my-4  ">
         My Booked Tutors ({tutors.length})
       </h1>
 
       {tutors.length === 0 ? (
         <div className="text-center mt-10 flex flex-col justify-center items-center">
           <Lottie style={{ width: "220px" }} animationData={noBookdTutor} loop />
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-lg">
             You haven’t booked any tutors yet.
           </p>
           <a href="/find-tutior" className="btn btn-outline mt-4">
@@ -53,19 +53,19 @@ const BookedTutor = () => {
         </div>
       ) : (
         <div className="overflow-x-auto border border-gray-300 dark:border-gray-700 rounded-lg">
-          <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-gray-900">
-            <thead className="bg-gray-100 dark:bg-gray-800">
+          <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700 bg-base-100 dark:bg-gray-900">
+            <thead className="bg-base-300 dark:bg-gray-800">
               <tr>
-                <th className="px-4 py-3 text-left text-sm font-medium text-gray-800 dark:text-gray-200">Photo</th>
-                <th className="px-4 py-3 text-left text-sm font-medium text-gray-800 dark:text-gray-200">Name</th>
-                <th className="px-4 py-3 text-left text-sm font-medium text-gray-800 dark:text-gray-200">Language</th>
-                <th className="px-4 py-3 text-left text-sm font-medium text-gray-800 dark:text-gray-200">Price</th>
-                <th className="px-4 py-3 text-left text-sm font-medium text-gray-800 dark:text-gray-200">Rating</th>
-                <th className="px-4 py-3 text-left text-sm font-medium text-gray-800 dark:text-gray-200">Your Review</th>
-                <th className="px-4 py-3 text-left text-sm font-medium text-gray-800 dark:text-gray-200">Action</th>
+                <th className="px-4 py-3 text-left text-sm font-medium">Photo</th>
+                <th className="px-4 py-3 text-left text-sm font-medium ">Name</th>
+                <th className="px-4 py-3 text-left text-sm font-medium ">Language</th>
+                <th className="px-4 py-3 text-left text-sm font-medium ">Price</th>
+                <th className="px-4 py-3 text-left text-sm font-medium ">Rating</th>
+                <th className="px-4 py-3 text-left text-sm font-medium ">Your Review</th>
+                <th className="px-4 py-3 text-left text-sm font-medium">Action</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+            <tbody className="divide-y  dark:divide-gray-700">
               {tutors.map((tutor) => {
                 const id = tutor.tutorId || tutor._id;
                 return (

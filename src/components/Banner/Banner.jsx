@@ -42,11 +42,11 @@ const Banner = () => {
   };
 
   return (
-    <div className="">
+    <div className="bg-blue-100 w-11/12 mx-auto rounded-3xl mt-4 shadow-lg  ">
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div key={index} className="">
-            <div className="hero min-h-[70vh] px-15  shadow-lg bg-blue-100">
+            <div className="hero min-h-[70vh] px-15   ">
               <div className="hero-content flex-col lg:flex-row-reverse gap-20">
                 <motion.img
                   src={slide.img}

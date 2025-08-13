@@ -109,7 +109,7 @@ const TutorDetails = () => {
   const { _id, review, price, name, language, image, description, category } =
     findData;
   return (
-    <div>
+    <div className="my-8">
       <h1 className="text-4xl text-center my-3 font-bold  border py-2 ">
         {" "}
         Best
@@ -167,7 +167,7 @@ const TutorDetails = () => {
           <div className="card-actions justify-center mt-4">
             <button
               onClick={() => handleBookClick(findData, user)}
-              className="btn bg-gradient-to-r from-indigo-500  to-emerald-500 w-full hover:text-white"
+              className="btn btn-primary btn-outline w-full hover:text-white"
             >
               Book Now
             </button>

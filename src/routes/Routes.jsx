@@ -14,6 +14,10 @@ import MyTutors from "../pages/MyTutors/MyTutors";
 import Error from "../components/Error/Error";
 import { envVars } from "../config";
 import AllCampaigns from "../pages/Allcampign/AllCampaigns";
+import DashboardLayout from "../components/Dashboard/DashboardLayout";
+import MyProfile from "../components/MyProfile/MyProfile";
+
+import About from "../components/About/About";
 
 export const router = createBrowserRouter([
     
@@ -25,20 +29,20 @@ export const router = createBrowserRouter([
         index: true,
         Component: Home,
       },
-      {
-        path: "/add-tutiour",
-        element: 
-              <PrivateRoute>
+      // {
+      //   path: "/add-tutiour",
+      //   element: 
+      //         <PrivateRoute>
             
-            <Addtutior></Addtutior>
-           </PrivateRoute>
+      //       <Addtutior></Addtutior>
+      //      </PrivateRoute>
         
-      },
-      {
-        path : '/my-tutor',
+      // },
+      // {
+      //   path : '/my-tutor',
       
-        element : <PrivateRoute> <MyTutors></MyTutors> </PrivateRoute> 
-      },
+      //   element : <PrivateRoute> <MyTutors></MyTutors> </PrivateRoute> 
+      // },
       {
         path: "/find-tutior",
         loader: () =>fetch(`${envVars.backend_origin}/addtutior`),
@@ -52,13 +56,13 @@ export const router = createBrowserRouter([
       },
       
 
-       {
-        path: "/my-booked-tutors",
-         loader: savedTutorsLoader,
-        element:
-          <PrivateRoute> <BookedTutor></BookedTutor></PrivateRoute>
-        ,
-      },
+      //  {
+      //   path: "/my-booked-tutors",
+      //    loader: savedTutorsLoader,
+      //   element:
+      //     <PrivateRoute> <BookedTutor></BookedTutor></PrivateRoute>
+      //   ,
+      // },
       {
         path: "/register",
         element: <Register></Register>,
@@ -70,11 +74,54 @@ export const router = createBrowserRouter([
       {
        path: '/all-campaigns',
        element: <AllCampaigns />
+     },
+
+     {
+      path:"/about",
+      element:<About></About>
      }
 
       
     ],
     
+  },
+
+
+  {
+         path:"/dashboard",
+         element:<PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+         children:[
+          {
+            index:true,
+            element:<MyProfile></MyProfile>
+          },
+          {
+
+            path:"/dashboard/my-profile",
+            element:<MyProfile></MyProfile>
+          }
+           ,{
+        path: "/dashboard/my-booked-tutors",
+         loader: savedTutorsLoader,
+        element:
+         <BookedTutor></BookedTutor>
+        
+      },
+        {
+        path: "/dashboard/add-tutiour",
+        element:<Addtutior></Addtutior>
+        
+      },
+            {
+        path : '/dashboard/my-tutor',
+      
+        element : <MyTutors></MyTutors>  
+      },
+          
+
+          
+         ]
+         
   },
   {
         path :"/*",
